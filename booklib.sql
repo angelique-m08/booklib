@@ -8,7 +8,7 @@ USE Booklib;
 
 CREATE TABLE `book` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `title` VARCHAR(255),
+  `title` VARCHAR(255) NOT NULL,
   `resume` VARCHAR(255),
   `cover` VARCHAR(255),
   `genre` VARCHAR(255)
