@@ -9,7 +9,7 @@ USE Booklib;
 CREATE TABLE `book` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `title` VARCHAR(255) NOT NULL,
-  `resume` VARCHAR(255),
+  `resume` VARCHAR(10000),
   `cover` VARCHAR(255),
   `genre` VARCHAR(255)
 );
@@ -18,12 +18,12 @@ CREATE TABLE `author` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `firstname` VARCHAR(255),
   `lastname` VARCHAR(255),
-  `biography` VARCHAR(255)
+  `biography` VARCHAR(10000)
 );
 
 CREATE TABLE `review` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `review` VARCHAR(255),
+  `review` VARCHAR(10000),
   `book_id` INT NOT NULL
 );
 
