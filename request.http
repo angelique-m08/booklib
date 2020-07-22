@@ -12,3 +12,10 @@ Content-Type: application/json
   "genre": "Policier"
 }
 
+### Update book
+PUT http://localhost:8000/books/1
+Content-Type: application/json
+
+{
+  "genre": "Thriller"
+}
