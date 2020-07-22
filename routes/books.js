@@ -30,4 +30,17 @@ router.post('/', (req, res) => {
   });
 });
 
+router.put('/:id', (req, res) => {
+  const formData = req.body;
+  const { id } = req.params;
+  connection.query('UPDATE book SET ? WHERE id = ?', [formData, id], (err, results) => {
+    if (err) {
+      return (
+        res.sendStatus(500)
+      )
+    }
+    res.status(200).json({ ...formData })
+  });
+});
+
 module.exports = router;
