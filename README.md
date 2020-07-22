@@ -9,7 +9,7 @@ This project was made by Angélique Mora.
 It's a digital and collaborative library.
 	
 ## Setup
-To run this project, install it locally using npm: https://github.com/angelique-m08/booklib-client.git
+To run this project, install it locally using npm:
 
 ```
 $ clone this repo
@@ -19,4 +19,4 @@ $ nodemon index.js
 ```
 
 ## Links:
-* GitHub booklib front : 
+* GitHub booklib front : https://github.com/angelique-m08/booklib-client.git
