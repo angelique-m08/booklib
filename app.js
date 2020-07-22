@@ -10,8 +10,8 @@ app.use(express.urlencoded({
 
 app.use('/', indexRouter);
 
-app.get('/', (request, response) => {
-  response.json({message: 'Bienvenue sur Express'} );
+app.get('/', (req, res) => {
+  res.status(200).json({message: 'Bienvenue sur Booklib'} );
 });
 
 module.exports = app; 
