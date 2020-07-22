@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS Booklib;
+DROP DATABASE IF EXISTS Booklib_test;
 
-CREATE DATABASE Booklib; 
+CREATE DATABASE Booklib_test; 
 
-USE Booklib; 
+USE Booklib_test; 
 
 /* -------- Tables creation  --------- */
 

@@ -1,14 +1,17 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const indexRouter = require('./routes');
 
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
 
-app.get('/', (request, response) => {
-  response.json({message: 'Bienvenue sur Express'} );
+app.use('/', indexRouter);
+
+app.get('/', (req, res) => {
+  res.status(200).json({message: 'Bienvenue sur Booklib'} );
 });
 
 module.exports = app; 

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon",
+    "test": "DB_NAME=booklib_test jest",
+    "test:watch": "DB_NAME=booklib_test jest --watchAll"
   },
   "author": "Angelique",
   "license": "ISC",
@@ -14,5 +15,9 @@
     "express": "^4.17.1",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "supertest": "^4.0.2"
   }
 }
