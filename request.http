@@ -1,3 +1,14 @@
 ### Read book
 GET http://localhost:8000/books
 
+### Create book
+POST http://localhost:8000/books
+Content-Type: application/json
+
+{
+  "title": "Deux gouttes d'eau",
+  "resume": "Jacques Expert",
+  "cover": "https://images-na.ssl-images-amazon.com/images/I/51DyTj1f28L._SX210_.jpg",
+  "genre": "Policier"
+}
+
