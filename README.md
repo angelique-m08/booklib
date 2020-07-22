@@ -9,7 +9,7 @@ This project was made by Angélique Mora.
 It's a digital and collaborative library.
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install it locally using npm: https://github.com/angelique-m08/booklib-client.git
 
 ```
 $ clone this repo
