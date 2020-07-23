@@ -13,6 +13,18 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  connection.query('SELECT * from review WHERE book_id = ?', id, (err, results) => {
+    if (err) {
+      return (
+        res.sendStatus(500)
+      )
+    }
+    res.status(200).json(results);
+  });
+});
+
 router.post('/', (req, res) => {
   const formData = req.body;
   connection.query('INSERT INTO review SET ?', formData, (err, results) => {
