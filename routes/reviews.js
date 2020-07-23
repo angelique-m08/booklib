@@ -13,4 +13,16 @@ router.get('/', (req, res) => {
   });
 });
 
+router.post('/', (req, res) => {
+  const formData = req.body;
+  connection.query('INSERT INTO review SET ?', formData, (err, results) => {
+    if (err) {
+      return (
+        res.sendStatus(500)
+      )
+    }
+    res.status(201).json({ ...formData })
+  });
+});
+
 module.exports = router;
