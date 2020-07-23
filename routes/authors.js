@@ -43,4 +43,17 @@ router.put('/:id', (req, res) => {
   });
 });
 
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  connection.query('DELETE FROM author WHERE id = ?', id, err => {
+    if (err) {
+      return (
+        res.sendStatus(500)
+      )
+      } else {
+        res.sendStatus(200)
+      }  
+  });
+});
+
 module.exports = router;
