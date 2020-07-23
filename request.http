@@ -61,3 +61,6 @@ Content-Type: application/json
 {
   "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tolkien_1916.jpg"
 }
+
+### Delete book
+DELETE http://localhost:8000/authors/4
