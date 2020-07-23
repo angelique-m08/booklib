@@ -16,9 +16,10 @@ CREATE TABLE `book` (
 
 CREATE TABLE `author` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `firstname` VARCHAR(255),
+  `firstname` VARCHAR(255) NOT NULL,
   `lastname` VARCHAR(255),
-  `biography` VARCHAR(10000)
+  `biography` VARCHAR(10000), 
+  `picture` VARCHAR(500)
 );
 
 CREATE TABLE `review` (
@@ -57,6 +58,6 @@ INSERT INTO book (`title`, `resume`, `cover`, `genre`) VALUES ("Deux gouttes d'e
 
 INSERT INTO review (`review`, `book_id`) VALUES ("Livre policier très prenant. Je l'ai dévoré !", "1"), ("J'ai adoré. Je recommande", "2");
 
-INSERT INTO author (`firstname`, `lastname`, `biography`) VALUES ("Jacques", "Expert", "Jacques Expert, né en 1956 à Bordeaux, est un journaliste, dirigeant de l'audiovisuel et écrivain français."), ("Andrzej", "Sapkowski", "Andrzej Sapkowski, né le 21 juin 1948 à Łódź, est un écrivain polonais, auteur d'histoires fantastiques et de fantasy. Surnommé « le Tolkien polonais »1,2, il est surtout connu pour sa saga littéraire Le Sorceleur, qui a été adaptée sous forme de jeu vidéo (The Witcher) et de série (The Witcher)."), ("George R. R.", "Martin", "George R. R. Martin, né le 20 septembre 1948 à Bayonne (New Jersey), est un écrivain américain de science-fiction et de fantasy, également scénariste et producteur de télévision. Son œuvre la plus connue est la série romanesque du Trône de fer, adaptée sous forme de série télévisée par HBO sous le titre Game of Thrones. ");
+INSERT INTO author (`firstname`, `lastname`, `biography`, `picture`) VALUES ("Jacques", "Expert", "Jacques Expert, né en 1956 à Bordeaux, est un journaliste, dirigeant de l'audiovisuel et écrivain français.", "https://cdn-s-www.ledauphine.com/images/ABB2AF9C-90E5-459B-B694-02002361586A/NW_detail_M/title-1576680650.jpg"), ("Andrzej", "Sapkowski", "Andrzej Sapkowski, né le 21 juin 1948 à Łódź, est un écrivain polonais, auteur d'histoires fantastiques et de fantasy. Surnommé « le Tolkien polonais »1,2, il est surtout connu pour sa saga littéraire Le Sorceleur, qui a été adaptée sous forme de jeu vidéo (The Witcher) et de série (The Witcher).", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Andrzej_Sapkowski_-_Lucca_Comics_and_Games_2015_2.JPG/220px-Andrzej_Sapkowski_-_Lucca_Comics_and_Games_2015_2.JPG"), ("George R. R.", "Martin", "George R. R. Martin, né le 20 septembre 1948 à Bayonne (New Jersey), est un écrivain américain de science-fiction et de fantasy, également scénariste et producteur de télévision. Son œuvre la plus connue est la série romanesque du Trône de fer, adaptée sous forme de série télévisée par HBO sous le titre Game of Thrones. ", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/George_R._R._Martin_by_Gage_Skidmore_2.jpg/220px-George_R._R._Martin_by_Gage_Skidmore_2.jpg");
 
 INSERT INTO book_author (`book_id`, `author_id`) VALUES ("1", "1"), ("2", "2");
