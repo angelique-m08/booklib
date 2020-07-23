@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
   });
 });
 
-router.post('/', (req, res) => {
+router.post('/:id', (req, res) => {
   const formData = req.body;
   connection.query('INSERT INTO review SET ?', formData, (err, results) => {
     if (err) {
