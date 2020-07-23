@@ -30,3 +30,11 @@ DELETE http://localhost:8000/books/2
 ### Read reviews
 GET http://localhost:8000/reviews
 
+### Create review
+POST http://localhost:8000/reviews
+Content-Type: application/json
+
+{
+  "review": "Très bon livre policier",
+  "book_id": "1"
+}
