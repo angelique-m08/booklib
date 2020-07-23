@@ -23,7 +23,7 @@ CREATE TABLE `author` (
 
 CREATE TABLE `review` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `review` VARCHAR(10000),
+  `review` VARCHAR(10000) NOT NULL,
   `book_id` INT NOT NULL
 );
 
