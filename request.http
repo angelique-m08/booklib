@@ -53,3 +53,11 @@ Content-Type: application/json
   "lastname": "Tolkien",
   "biography": "J. R. R. Tolkien, est un écrivain, poète, philologue, essayiste et professeur d’université britannique, né le 3 janvier 1892 à Bloemfontein (État libre d'Orange) et mort le 2 septembre 1973 à Bournemouth (Royaume-Uni). Il est principalement connu pour ses romans Le Hobbit et Le Seigneur des anneaux. "
 }
+
+### Update book
+PUT http://localhost:8000/authors/4
+Content-Type: application/json
+
+{
+  "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tolkien_1916.jpg"
+}
