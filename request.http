@@ -38,3 +38,8 @@ Content-Type: application/json
   "review": "Très bon livre policier",
   "book_id": "1"
 }
+
+################## AUTHOR #####################
+
+### Read author
+GET http://localhost:8000/authors
