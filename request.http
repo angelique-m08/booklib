@@ -30,11 +30,8 @@ DELETE http://localhost:8000/books/2
 ### Read reviews
 GET http://localhost:8000/reviews
 
-### Read reviews by id
-GET http://localhost:8000/reviews/1
-
 ### Create review
-POST http://localhost:8000/reviews
+POST http://localhost:8000/reviews/1
 Content-Type: application/json
 
 {
