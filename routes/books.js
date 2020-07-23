@@ -45,7 +45,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
-  connection.query('DELETE FROM author WHERE id = ?', id, err => {
+  connection.query('DELETE FROM book WHERE id = ?', id, err => {
     if (err) {
       return (
         res.sendStatus(500)
